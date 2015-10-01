@@ -62,7 +62,7 @@ class My_Panel extends JPanel{
   private int                    mAbsoluteFaceSize   = 0;
       // Create a constructor method  
   public processor(){    
-    mJavaDetector = new CascadeClassifier(getClass().getResource("lucrecia.xml").getPath());
+    mJavaDetector = new CascadeClassifier(getClass().getResource("MilPesos.xml").getPath());
     if( mJavaDetector.empty())
     {
       System.out.println("--(!)Error loading A\n");
@@ -119,7 +119,7 @@ class My_Panel extends JPanel{
 public class window {  
   public static void main(String arg[]){  
        // Load the native library.  
-     System.load("/usr/local/Cellar/opencv/2.4.12/share/OpenCV/java/libopencv_java2412.dylib");
+     System.load(System.getProperty("user.dir")+"/lib/libopencv_java2412.dylib");
      String window_name = "Capture - Face detection";  
      JFrame frame = new JFrame(window_name);  
      frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  
